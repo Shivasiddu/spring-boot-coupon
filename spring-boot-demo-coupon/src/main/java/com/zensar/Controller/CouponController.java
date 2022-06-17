@@ -33,7 +33,7 @@ public class CouponController {
 		return new ResponseEntity<CouponDto>(couponservice.getCoupon(couponId), HttpStatus.OK);
 	}
 
-	@GetMapping(value = "/coupons")
+	@GetMapping(value =  "/coupons" )
 	public ResponseEntity<List<CouponDto>> getAllCoupon(
 			@RequestParam(value = "pageNumber", required = false, defaultValue = "0") int pageNumber,
 			@RequestParam(value = "pageSize", required = false, defaultValue = "10") int pageSize) {
